@@ -24,7 +24,15 @@
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
 	</script>
-
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+        console.log("The function was called")
+    </script>
+    <script type="text/javascript">
+        // alert("The child theme header.php is working")
+    </script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
