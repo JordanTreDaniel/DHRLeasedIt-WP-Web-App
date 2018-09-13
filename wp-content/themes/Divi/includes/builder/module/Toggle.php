@@ -3,6 +3,7 @@
 class ET_Builder_Module_Toggle extends ET_Builder_Module {
 	function init() {
 		$this->name                       = esc_html__( 'Toggle', 'et_builder' );
+		$this->plural                     = esc_html__( 'Toggles', 'et_builder' );
 		$this->slug                       = 'et_pb_toggle';
 		$this->vb_support                 = 'on';
 		$this->additional_shortcode_slugs = array( 'et_pb_accordion_item' );
@@ -68,7 +69,7 @@ class ET_Builder_Module_Toggle extends ET_Builder_Module {
 					'label'    => esc_html__( 'Body', 'et_builder' ),
 					'css'      => array(
 						'main'        => "{$this->main_css_element}",
-						'plugin_main' => "{$this->main_css_element}, {$this->main_css_element} p",
+						'plugin_main' => "{$this->main_css_element}, {$this->main_css_element} p, {$this->main_css_element} .et_pb_toggle_content",
 						'line_height' => "{$this->main_css_element} p",
 						'text_shadow' => "{$this->main_css_element} .et_pb_toggle_content",
 					),

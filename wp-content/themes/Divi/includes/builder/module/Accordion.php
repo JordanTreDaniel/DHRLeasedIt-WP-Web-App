@@ -3,6 +3,7 @@
 class ET_Builder_Module_Accordion extends ET_Builder_Module {
 	function init() {
 		$this->name       = esc_html__( 'Accordion', 'et_builder' );
+		$this->plural     = esc_html__( 'Accordions', 'et_builder' );
 		$this->slug       = 'et_pb_accordion';
 		$this->vb_support = 'on';
 		$this->child_slug = 'et_pb_accordion_item';
@@ -248,7 +249,7 @@ class ET_Builder_Module_Accordion extends ET_Builder_Module {
 		$selector = sprintf( '.%1$s .et_pb_toggle', self::get_module_order_class( $function_name ) );
 		self::set_style( $function_name, array(
 			'selector'    => $selector,
-			'declaration' => $boxShadow->get_value( $this->shortcode_atts )
+			'declaration' => $boxShadow->get_value( $this->props )
 		) );
 	}
 }

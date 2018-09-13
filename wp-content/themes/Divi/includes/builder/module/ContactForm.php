@@ -3,6 +3,7 @@
 class ET_Builder_Module_Contact_Form extends ET_Builder_Module {
 	function init() {
 		$this->name            = esc_html__( 'Contact Form', 'et_builder' );
+		$this->plural          = esc_html__( 'Contact Forms', 'et_builder' );
 		$this->slug            = 'et_pb_contact_form';
 		$this->vb_support      = 'on';
 		$this->child_slug      = 'et_pb_contact_field';
@@ -241,6 +242,10 @@ class ET_Builder_Module_Contact_Form extends ET_Builder_Module {
 	}
 
 	function render( $attrs, $content = null, $render_slug ) {
+		global $et_pb_half_width_counter;
+
+		$et_pb_half_width_counter = 0;
+
 		$module_id             = $this->props['module_id'];
 		$captcha               = $this->props['captcha'];
 		$email                 = $this->props['email'];
